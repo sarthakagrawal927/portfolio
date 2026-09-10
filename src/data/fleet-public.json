@@ -4,6 +4,37 @@
   "historySemantics": "firstCommitAt and latestCommitAt are dates from the currently retained Git history. They are not incorporation, launch, or retirement dates.",
   "directory": [
     {
+      "id": "codevetter",
+      "name": "CodeVetter",
+      "description": "Execution-backed verification for AI-written software changes — local-first and inspectable.",
+      "makerNote": "I built CodeVetter to make reviewing AI-generated code rigorous without giving up a local-first workflow.",
+      "purposeContract": {
+        "purpose": "CodeVetter verifies whether AI-written software changes actually satisfy their task, not merely whether the diff looks plausible.",
+        "audience": "Developers and teams shipping code produced with AI agents.",
+        "outcome": "Higher confidence that an agent completed the requested change correctly and safely.",
+        "mechanism": "Local-first review combines repository context, executable checks, targeted evaluation, and inspectable verification receipts.",
+        "proof": "Published macOS 1.13.9 is signed and notarized. Its CLI has verified real Codex review, passing and failing executable checks, and persisted receipts on a bounded Node fixture.",
+        "nextAction": "Try the developer preview on a small local repository. Use the documented manual update path; in-app updating and other review providers remain unqualified."
+      },
+      "kind": "product",
+      "category": "utility",
+      "form": "Desktop app",
+      "platforms": ["macOS"],
+      "technologies": ["Swift", "SwiftUI", "Rust", "SQLite"],
+      "group": "featured",
+      "lifecycle": "primary",
+      "shareable": true,
+      "deployed": true,
+      "deploymentProviders": ["Cloudflare Pages", "Cloudflare Workers"],
+      "domains": ["codevetter.com"],
+      "url": "https://codevetter.com",
+      "repositoryUrl": "https://github.com/Codevetter/codevetter",
+      "changelogUrl": "https://codevetter.com/changelog",
+      "roadmapUrl": "https://github.com/Codevetter/codevetter/issues",
+      "firstCommitAt": "2025-11-30",
+      "latestCommitAt": "2026-09-09"
+    },
+    {
       "id": "posttrainllm",
       "name": "PostTrainLLM",
       "description": "An experimental browser model playground: run small language models locally with visible generation metrics.",
@@ -17,6 +48,7 @@
         "nextAction": "Explore the measured recipes and follow new experiments as they produce reproducible proof rather than scale claims."
       },
       "kind": "product",
+      "category": "utility",
       "form": "Research platform",
       "platforms": ["Web", "Local"],
       "technologies": ["Astro", "Python", "Rust", "Cloudflare Pages"],
@@ -47,6 +79,7 @@
         "nextAction": "Open Live and use the catalogue, search, and suggestions to add or act on something you genuinely want to experience."
       },
       "kind": "product",
+      "category": "media",
       "form": "Web app",
       "platforms": ["Web"],
       "technologies": ["Next.js", "TypeScript", "Cloudflare Workers", "D1"],
@@ -61,7 +94,7 @@
       "changelogUrl": "https://live.significanthobbies.com/changelog",
       "roadmapUrl": "https://github.com/Significant-Hobbies/live/issues",
       "firstCommitAt": "2026-03-01",
-      "latestCommitAt": "2026-09-07"
+      "latestCommitAt": "2026-09-09"
     },
     {
       "id": "saas-maker",
@@ -77,6 +110,7 @@
         "nextAction": "Explore the complete directory or open the public tooling catalogue; product-specific work continues in each owning repository."
       },
       "kind": "product",
+      "category": "media",
       "form": "Web directory and service",
       "platforms": ["Web", "API"],
       "technologies": ["Astro", "Cloudflare", "D1", "IssuePages"],
@@ -91,7 +125,7 @@
       "changelogUrl": "https://sassmaker.com/changelog",
       "roadmapUrl": "https://github.com/sass-maker/saas-maker/issues",
       "firstCommitAt": "2026-02-26",
-      "latestCommitAt": "2026-09-07"
+      "latestCommitAt": "2026-09-09"
     },
     {
       "id": "gitstat",
@@ -107,6 +141,7 @@
         "nextAction": "Use the dashboard for a concrete portfolio question; request new analysis only when an unanswered recurring question appears."
       },
       "kind": "product",
+      "category": "experimental",
       "form": "Web app",
       "platforms": ["Web"],
       "technologies": ["React", "Vite", "TypeScript", "Cloudflare Pages"],
@@ -124,6 +159,37 @@
       "latestCommitAt": "2026-09-06"
     },
     {
+      "id": "email-manager",
+      "name": "Kinetic",
+      "description": "A private Gmail workspace for local semantic search, sender insights, and explicit unsubscribe workflows.",
+      "makerNote": "Gmail did not help me see who was filling my inbox, so I built a clearer way to understand volume and unsubscribe.",
+      "purposeContract": {
+        "purpose": "Kinetic helps a person understand who fills their Gmail inbox and deliberately reduce unwanted volume.",
+        "audience": "A Gmail user who wants private search, sender-level insight, and explicit unsubscribe control.",
+        "outcome": "Find old mail, identify repeat senders, and unsubscribe with a clear understanding of what will change.",
+        "mechanism": "A private Gmail workspace combines local semantic search, sender aggregation, and user-confirmed unsubscribe workflows.",
+        "proof": "The maintained application performs its intended search, sender-insight, and unsubscribe jobs in regular use.",
+        "nextAction": "Open the private workspace and investigate a sender or search question; no speculative feature expansion is planned."
+      },
+      "kind": "product",
+      "category": "utility",
+      "form": "Web app",
+      "platforms": ["Web", "API"],
+      "technologies": ["React", "Hono", "Cloudflare Workers", "D1"],
+      "group": "past",
+      "lifecycle": "inactive",
+      "shareable": true,
+      "deployed": true,
+      "deploymentProviders": ["Cloudflare Workers"],
+      "domains": ["mail.significanthobbies.com"],
+      "url": "https://mail.significanthobbies.com",
+      "repositoryUrl": "https://github.com/Significant-Hobbies/email-manager",
+      "changelogUrl": "https://mail.significanthobbies.com/changelog",
+      "roadmapUrl": "https://github.com/Significant-Hobbies/email-manager/issues",
+      "firstCommitAt": "2026-02-24",
+      "latestCommitAt": "2026-09-09"
+    },
+    {
       "id": "chatgpt-memory-insights",
       "name": "Memory Map",
       "description": "A browser-local experiment for importing a ChatGPT export, exploring semantic themes and search, and optionally saving analysis on your device.",
@@ -137,6 +203,7 @@
         "nextAction": "Import a ChatGPT export locally and explore the resulting private map; the source archive stays in the browser."
       },
       "kind": "product",
+      "category": "utility",
       "form": "Web app",
       "platforms": ["Web"],
       "technologies": ["Astro", "TypeScript", "Cloudflare Pages"],
@@ -154,36 +221,6 @@
       "latestCommitAt": "2026-09-07"
     },
     {
-      "id": "psi-swarm",
-      "name": "PSI Swarm",
-      "description": "Source-installed local Lighthouse audits with saved history; use the documented source setup, not the older packaged release.",
-      "makerNote": "I wanted repeatable evidence of how my products perform under real Lighthouse conditions, not a single flattering test.",
-      "purposeContract": {
-        "purpose": "PSI Swarm measures website performance as repeated distributions instead of a single flattering Lighthouse run.",
-        "audience": "The Fleet operator and developers who need trustworthy performance evidence across public products.",
-        "outcome": "See typical performance, variability, and regressions under repeated real measurement conditions.",
-        "mechanism": "An operational CLI runs and aggregates multiple PageSpeed and Lighthouse observations for Site Health.",
-        "proof": "The completed measurement tool already feeds repeated performance evidence into the portfolio dashboard.",
-        "nextAction": "Run it for a concrete performance investigation or consume its evidence in Site Health; keep the tool operationally narrow."
-      },
-      "kind": "platform",
-      "form": "Local performance tool",
-      "platforms": ["Web", "CLI"],
-      "technologies": ["TypeScript", "Lighthouse", "SQLite", "Astro"],
-      "group": "past",
-      "lifecycle": "inactive",
-      "shareable": true,
-      "deployed": true,
-      "deploymentProviders": ["Cloudflare Pages"],
-      "domains": ["performance.sassmaker.com"],
-      "url": "https://performance.sassmaker.com",
-      "repositoryUrl": "https://github.com/sass-maker/psi-swarm",
-      "changelogUrl": "https://performance.sassmaker.com/changelog",
-      "roadmapUrl": "https://github.com/sass-maker/psi-swarm/issues",
-      "firstCommitAt": "2026-06-03",
-      "latestCommitAt": "2026-09-07"
-    },
-    {
       "id": "on-record",
       "name": "High Signal Podcasts",
       "description": "Search evidenced podcast claims and follow links back to the original episode or publication.",
@@ -194,9 +231,10 @@
         "outcome": "Find what a person actually said or recommended and trace it back to the source episode.",
         "mechanism": "A source-backed corpus extracts attributable claims and organizes them into people, topics, books, tools, and emerging signals.",
         "proof": "The public corpus is live with 11,624 published claims, 294 named references, and 1,190 episodes with evidence.",
-        "nextAction": "Browse a recommendation or claim and follow its quote, speaker, episode, and source receipt."
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
       },
       "kind": "product",
+      "category": "media",
       "form": "Podcast intelligence web app",
       "platforms": ["Web", "API"],
       "technologies": ["Astro", "Hono", "Cloudflare Workers", "D1"],
@@ -208,7 +246,6 @@
       "domains": ["podcasts.highsignal.app"],
       "url": "https://podcasts.highsignal.app",
       "repositoryUrl": "https://github.com/Significant-Hobbies/on-record",
-      "changelogUrl": "https://podcasts.highsignal.app/changelog",
       "roadmapUrl": "https://github.com/Significant-Hobbies/on-record/issues",
       "firstCommitAt": "2026-08-24",
       "latestCommitAt": "2026-09-07"
@@ -224,9 +261,10 @@
         "outcome": "Publish and update a durable page without adopting a separate CMS.",
         "mechanism": "An owner-approved issue is rendered into a public page with edit, archive, search, and source-link behavior.",
         "proof": "The owner-only production pilot has proven the issue-to-page loop at issues.sarthakagrawal.dev.",
-        "nextAction": "Read the current pages or inspect the pilot; public authoring remains gated on moderation and authenticated rendering."
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
       },
       "kind": "experiment",
+      "category": "experimental",
       "form": "Issue-backed publishing website",
       "platforms": ["Web", "GitHub"],
       "technologies": ["Hono", "TypeScript", "Cloudflare Workers", "D1"],
@@ -238,38 +276,8 @@
       "domains": ["issues.sarthakagrawal.dev"],
       "url": "https://issues.sarthakagrawal.dev",
       "repositoryUrl": "https://github.com/sarthakagrawal927/issue-pages",
-      "changelogUrl": "https://issues.sarthakagrawal.dev/changelog",
       "roadmapUrl": "https://github.com/sarthakagrawal927/issue-pages/issues",
       "firstCommitAt": "2026-08-25",
-      "latestCommitAt": "2026-09-07"
-    },
-    {
-      "id": "everythingrated",
-      "name": "EverythingRated",
-      "description": "A ratings experiment for comparing AI developer tools, with visible small-sample counts and shareable weighting.",
-      "makerNote": "I have long wanted a place where people can make lists and rate anything, while recognizing that its social loop needs real care.",
-      "purposeContract": {
-        "purpose": "EverythingRated makes anonymous opinions about AI developer tools visible axis by axis.",
-        "audience": "Developers and technical operators comparing AI development tools for real projects.",
-        "outcome": "Inspect trade-offs across Speed, Accuracy, Cost, Ergonomics and Integration depth, with the sample size visible.",
-        "mechanism": "A public directory combines per-axis rating counts with weighted comparison links; unrated axes remain visibly unavailable.",
-        "proof": "The hosted guest comparison covers a 24-tool directory with five axes. Initial owner ratings and small samples are early opinions, not benchmarks or consensus.",
-        "nextAction": "Compare tools, inspect the per-axis evidence counts, and share a weighted comparison as an experiment. Rating submission is outside the verified guest workflow."
-      },
-      "kind": "experiment",
-      "form": "Ratings experiment",
-      "platforms": ["Web"],
-      "technologies": ["Astro", "Next.js", "Cloudflare Workers", "D1"],
-      "group": "past",
-      "lifecycle": "inactive",
-      "shareable": true,
-      "deployed": true,
-      "deploymentProviders": ["Cloudflare Workers"],
-      "domains": ["ratings.highsignal.app"],
-      "url": "https://ratings.highsignal.app",
-      "repositoryUrl": "https://github.com/High-Signal-App/everythingrated",
-      "roadmapUrl": "https://github.com/High-Signal-App/everythingrated/issues",
-      "firstCommitAt": "2026-04-26",
       "latestCommitAt": "2026-09-07"
     },
     {
@@ -283,9 +291,10 @@
         "outcome": "Find relevant papers and retrieve grounded context from a large retained corpus.",
         "mechanism": "A curated research dataset is indexed for search and retrieval-assisted analysis with source structure intact.",
         "proof": "The corpus and discovery system are essentially complete and available when a real research question appears.",
-        "nextAction": "Use the library for a named research question; maintain the corpus rather than expanding it speculatively."
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
       },
       "kind": "product",
+      "category": "media",
       "form": "Research library",
       "platforms": ["Web"],
       "technologies": ["Astro", "Python", "React", "TypeScript"],
@@ -297,7 +306,6 @@
       "domains": ["papers.highsignal.app"],
       "url": "https://papers.highsignal.app",
       "repositoryUrl": "https://github.com/High-Signal-App/research-papers",
-      "changelogUrl": "https://papers.highsignal.app/changelog",
       "roadmapUrl": "https://github.com/High-Signal-App/research-papers/issues",
       "firstCommitAt": "2026-05-30",
       "latestCommitAt": "2026-09-06"
@@ -313,9 +321,10 @@
         "outcome": "Understand relevant anatomy and compare remedy evidence without mistaking the product for medical diagnosis.",
         "mechanism": "An interactive body-system model links concerns to structured remedy pages with explicit evidence grades and safety limits.",
         "proof": "A technically ambitious reference exists, but sustained evidence quality, medical safety, and content maintenance are unresolved.",
-        "nextAction": "Use the retained material as an educational experiment only; reopen publication work after defining a medical-safety and evidence standard."
+        "nextAction": "Preserved experiment; no current work or obligation to resume."
       },
       "kind": "experiment",
+      "category": "experimental",
       "form": "Interactive experiment",
       "platforms": ["Web"],
       "technologies": ["Astro", "React", "Three.js", "Cloudflare Pages"],
@@ -327,10 +336,40 @@
       "domains": ["materia.significanthobbies.com"],
       "url": "https://materia.significanthobbies.com",
       "repositoryUrl": "https://github.com/Significant-Hobbies/materia",
-      "changelogUrl": "https://materia.significanthobbies.com/changelog",
       "roadmapUrl": "https://github.com/Significant-Hobbies/materia/issues",
       "firstCommitAt": "2026-06-21",
       "latestCommitAt": "2026-09-06"
+    },
+    {
+      "id": "anime-list",
+      "name": "Anime List",
+      "description": "Anime and manga discovery with multi-axis filtering and personal watchlists.",
+      "makerNote": "I wanted better anime filtering and discovery than the standard catalog experience, with a watchlist that works for me.",
+      "purposeContract": {
+        "purpose": "Anime List helps anime and manga fans filter a large catalogue, discover what fits, and maintain a personal watchlist.",
+        "audience": "Anime and manga fans who want more precise discovery than a standard catalogue provides.",
+        "outcome": "Find suitable titles quickly and keep personal viewing or reading plans organized.",
+        "mechanism": "Multi-field search, shareable filters, seasonal discovery, taste tools, schedules, and signed-in watchlists operate over a large synced catalogue.",
+        "proof": "The production app serves roughly 35,000 titles and is frequently used; broader community features are intentionally out of scope.",
+        "nextAction": "Search the catalogue or use the watchlist; maintenance focuses on data quality and core discovery reliability."
+      },
+      "kind": "product",
+      "category": "media",
+      "form": "Web app",
+      "platforms": ["Web", "API"],
+      "technologies": ["React", "Vite", "Hono", "Cloudflare"],
+      "group": "current",
+      "lifecycle": "active",
+      "shareable": true,
+      "deployed": true,
+      "deploymentProviders": ["Cloudflare Pages", "Cloudflare Workers"],
+      "domains": ["anime.significanthobbies.com"],
+      "url": "https://anime.significanthobbies.com",
+      "repositoryUrl": "https://github.com/Significant-Hobbies/anime-list",
+      "changelogUrl": "https://anime.significanthobbies.com/changelog",
+      "roadmapUrl": "https://github.com/Significant-Hobbies/anime-list/issues",
+      "firstCommitAt": "2025-02-16",
+      "latestCommitAt": "2026-09-08"
     },
     {
       "id": "looptv",
@@ -346,6 +385,7 @@
         "nextAction": "Open a curated channel and watch; future changes are limited to catalogue health or a proven viewing need."
       },
       "kind": "product",
+      "category": "media",
       "form": "Web app",
       "platforms": ["Web", "TV"],
       "technologies": ["Astro", "React", "Vite", "Cloudflare Pages"],
@@ -363,6 +403,68 @@
       "latestCommitAt": "2026-09-07"
     },
     {
+      "id": "swe-interview-prep",
+      "name": "SWE Interview Prep",
+      "description": "A learning OS for software-engineering interview practice.",
+      "makerNote": "I built this as a learning-by-doing system that combines Pomodoro, Feynman, retrieval practice, and practical roadmaps.",
+      "purposeContract": {
+        "purpose": "SWE Interview Prep is a personal learning OS that turns software-engineering study into retained, artifact-backed understanding.",
+        "audience": "Software engineers preparing for interviews or strengthening practical technical judgment through active study.",
+        "outcome": "Build causal understanding that survives recall and can be demonstrated through code, diagrams, explanations, or projects.",
+        "mechanism": "An evidence-gated Concept → Drill → Build → Review → Apply loop combines retrieval practice, Feynman explain-backs, roadmaps, and adaptive review.",
+        "proof": "A fresh guest can complete a graded TypeScript drill and return to saved code in the same browser. Account sync and AI-graded mastery require sign-in and remain separately unqualified.",
+        "nextAction": "Try a coding drill as a guest; progress stays in this browser. Use the issue tracker for account-sync qualification limits."
+      },
+      "kind": "product",
+      "category": "media",
+      "form": "Learning web app",
+      "platforms": ["Web"],
+      "technologies": ["React", "Vite", "TypeScript", "Cloudflare Pages"],
+      "group": "current",
+      "lifecycle": "active",
+      "shareable": true,
+      "deployed": true,
+      "deploymentProviders": ["Cloudflare Pages"],
+      "domains": ["learn.significanthobbies.com"],
+      "url": "https://learn.significanthobbies.com",
+      "repositoryUrl": "https://github.com/Significant-Hobbies/swe-interview-prep",
+      "changelogUrl": "https://learn.significanthobbies.com/changelog",
+      "roadmapUrl": "https://github.com/Significant-Hobbies/swe-interview-prep/issues",
+      "firstCommitAt": "2026-02-08",
+      "latestCommitAt": "2026-09-08"
+    },
+    {
+      "id": "rolepatch",
+      "name": "RolePatch",
+      "description": "A guest resume-tailoring experiment with a reviewable diff and browser-local document exports.",
+      "makerNote": "I wanted a focused way to tailor a resume and its supporting material to the actual job description.",
+      "purposeContract": {
+        "purpose": "RolePatch tailors a resume and supporting application material to the evidence and language of a specific job.",
+        "audience": "A job seeker preparing a serious application for a particular role.",
+        "outcome": "Present relevant experience more clearly and prepare for the role without inventing qualifications.",
+        "mechanism": "Paste a resume and job description, review the generated changes, save in the browser, and export the current document.",
+        "proof": "The guest resume, tailoring, review, save/reload and local document-export path has been verified with synthetic examples. Account sync and broader application tools remain unqualified.",
+        "nextAction": "Try the guest workflow for one job, review every proposed claim, and export the version you want to use."
+      },
+      "kind": "product",
+      "category": "utility",
+      "form": "Web app",
+      "platforms": ["Web", "API"],
+      "technologies": ["Next.js", "React", "Cloudflare Workers", "D1"],
+      "group": "past",
+      "lifecycle": "inactive",
+      "shareable": true,
+      "deployed": true,
+      "deploymentProviders": ["Cloudflare Workers"],
+      "domains": ["rolepatch.com"],
+      "url": "https://rolepatch.com",
+      "repositoryUrl": "https://github.com/Significant-Hobbies/rolepatch",
+      "changelogUrl": "https://rolepatch.com/changelog",
+      "roadmapUrl": "https://github.com/Significant-Hobbies/rolepatch/issues",
+      "firstCommitAt": "2026-02-23",
+      "latestCommitAt": "2026-09-07"
+    },
+    {
       "id": "starboard",
       "name": "Starboard",
       "description": "Explore public GitHub repositories and related projects through a searchable discovery experiment.",
@@ -376,6 +478,7 @@
         "nextAction": "Connect or explore a Stars collection and use a current project question to drive discovery; avoid unrelated alert or reporting scope."
       },
       "kind": "product",
+      "category": "utility",
       "form": "Web app",
       "platforms": ["Web", "API"],
       "technologies": ["Next.js", "React", "Cloudflare Workers", "D1"],
@@ -393,65 +496,6 @@
       "latestCommitAt": "2026-09-07"
     },
     {
-      "id": "protein-index",
-      "name": "Protein Index",
-      "description": "Explore dated nutrition records with original label links, observation dates and explicit verification limits.",
-      "makerNote": "I wanted a clear catalog for comparing the protein products available in India, despite the difficulty of reliable data.",
-      "purposeContract": {
-        "purpose": "Protein Index was built to catalogue and compare protein products available in India using trustworthy nutrition data.",
-        "audience": "Indian shoppers comparing packaged protein sources on nutrition, price, and practical fit.",
-        "outcome": "Inspect recorded nutrition alongside its source, observation date and verification authority.",
-        "mechanism": "A product catalogue normalizes nutrition and comparison fields across available Indian protein products.",
-        "proof": "Hosted search and detail expose dated source and authority labels; one original nutrition label and its density calculation were independently checked. This does not verify the entire catalogue.",
-        "nextAction": "Explore dated records and inspect original labels; current product identity and packaging require separate verification."
-      },
-      "kind": "experiment",
-      "form": "Data API and web app",
-      "platforms": ["Web", "API"],
-      "technologies": ["React", "Hono", "Cloudflare Workers", "D1"],
-      "group": "past",
-      "lifecycle": "inactive",
-      "shareable": true,
-      "deployed": true,
-      "deploymentProviders": ["Cloudflare Workers"],
-      "domains": ["protein.significanthobbies.com"],
-      "url": "https://protein.significanthobbies.com",
-      "repositoryUrl": "https://github.com/Significant-Hobbies/protein-index-resilience",
-      "roadmapUrl": "https://github.com/Significant-Hobbies/protein-index-resilience/issues",
-      "firstCommitAt": "2026-07-15",
-      "latestCommitAt": "2026-09-07"
-    },
-    {
-      "id": "veg-protein-food",
-      "name": "Recipe Index",
-      "description": "Search vegetarian recipes by protein and calories, with links to the original recipe publishers.",
-      "makerNote": "I wanted a practical collection of higher-protein recipes that works with ingredients people actually use in Indian kitchens.",
-      "purposeContract": {
-        "purpose": "Recipe Index collects practical higher-protein vegetarian foods and recipes built around ingredients used in Indian kitchens.",
-        "audience": "Vegetarian cooks in India who want more protein without abandoning familiar ingredients and meals.",
-        "outcome": "Find realistic food ideas and compare their nutrition when meal variety becomes useful.",
-        "mechanism": "A searchable food directory organizes recipes and ingredient-level protein comparisons for an Indian cooking context.",
-        "proof": "A public directory exists, but the result did not become compelling enough to justify active expansion.",
-        "nextAction": "Browse the retained directory; new recipe work waits until cooking variety becomes a real owner need."
-      },
-      "kind": "experiment",
-      "form": "Food directory",
-      "platforms": ["Web"],
-      "technologies": ["Astro", "Cloudflare Pages"],
-      "group": "past",
-      "lifecycle": "inactive",
-      "shareable": true,
-      "deployed": true,
-      "deploymentProviders": ["Cloudflare Pages"],
-      "domains": ["veg-protein-food.significanthobbies.com"],
-      "url": "https://veg-protein-food.significanthobbies.com",
-      "repositoryUrl": "https://github.com/Significant-Hobbies/veg-protein-food",
-      "changelogUrl": "https://veg-protein-food.significanthobbies.com/changelog",
-      "roadmapUrl": "https://github.com/Significant-Hobbies/veg-protein-food/issues",
-      "firstCommitAt": "2026-08-15",
-      "latestCommitAt": "2026-09-06"
-    },
-    {
       "id": "mashup",
       "name": "Mashup",
       "description": "Two playable examples of a local media-editing pipeline, with captions and inspectable source and approval receipts.",
@@ -462,9 +506,10 @@
         "outcome": "Find, approve, sequence, and render useful clips without losing source provenance or editorial control.",
         "mechanism": "A local pipeline combines archive analysis, clipping, editable EDLs, source receipts, approval boundaries, and deterministic rendering.",
         "proof": "The first public Startups proof assembles a source-faithful 47-second argument from four beats across three Creative Commons podcast episodes, with captions and media receipts.",
-        "nextAction": "Watch the public examples and inspect their source receipts. The local operator workflow and creator pilot remain separate from this showcase."
+        "nextAction": "Preserved experiment; no current work or obligation to resume."
       },
       "kind": "experiment",
+      "category": "experimental",
       "form": "Local media tool with public proof",
       "platforms": ["Web", "CLI", "Local"],
       "technologies": ["Python", "FFmpeg", "Astro", "Cloudflare Pages"],
@@ -491,9 +536,10 @@
         "outcome": "Prototype a mechanic once and ship it as a normal web game and a submission-ready playable package.",
         "mechanism": "A reusable gamekit supplies loops, saves, offline progress, platform adapters, and builds for a small games hub.",
         "proof": "The research goal produced a working gamekit, a live idle game, and YouTube-compatible packaging; the project is now parked.",
-        "nextAction": "Play the retained game or inspect the kit; add another game only when a specific mechanic is worth studying."
+        "nextAction": "Preserved experiment; no current work or obligation to resume."
       },
       "kind": "experiment",
+      "category": "experimental",
       "form": "Game collection",
       "platforms": ["Web", "YouTube Playables"],
       "technologies": ["TypeScript", "Vite", "Cloudflare Pages"],
@@ -520,21 +566,21 @@
         "outcome": "Replace flattened comparison with a more humane, evidence-bounded understanding of conditions, sequence, perseverance, and luck.",
         "mechanism": "A guided research exhibit connects source-linked life events and early-breakthrough paths through what people brought, were handed, and were surrounded by.",
         "proof": "The publication contains thousands of documented early-breakthrough paths, visible methodology, and ongoing source-linked profile coverage.",
-        "nextAction": "Complete the guided comparison-futility journey, then inspect the underlying profiles, sources, and coverage."
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
       },
       "kind": "product",
+      "category": "media",
       "form": "Research publication",
       "platforms": ["Web"],
       "technologies": ["Astro", "TypeScript", "Cloudflare Pages"],
-      "group": "current",
-      "lifecycle": "active",
+      "group": "past",
+      "lifecycle": "inactive",
       "shareable": true,
       "deployed": true,
       "deploymentProviders": ["Cloudflare Pages"],
       "domains": ["paths.significanthobbies.com"],
       "url": "https://paths.significanthobbies.com",
       "repositoryUrl": "https://github.com/Significant-Hobbies/what-it-takes-to-win",
-      "changelogUrl": "https://paths.significanthobbies.com/changelog",
       "roadmapUrl": "https://github.com/Significant-Hobbies/what-it-takes-to-win/issues",
       "firstCommitAt": "2026-07-21",
       "latestCommitAt": "2026-09-07"
@@ -553,6 +599,7 @@
         "nextAction": "Explore the current work and résumé or use the listed contact paths; do not infer stale focus areas from older copy."
       },
       "kind": "product",
+      "category": "media",
       "form": "Portfolio website",
       "platforms": ["Web"],
       "technologies": ["Astro", "React", "Cloudflare Pages", "IssuePages"],
@@ -570,36 +617,6 @@
       "latestCommitAt": "2026-09-07"
     },
     {
-      "id": "field-track",
-      "name": "Field Track",
-      "description": "A labelled synthetic field-team demo for exploring routes, visits and agent summaries; Android tracking is not qualified.",
-      "makerNote": "I started Field Track for my father: a lower-cost way for managers to locate employees carrying administrator-enrolled Android devices and review retained routes.",
-      "purposeContract": {
-        "purpose": "Field Track is an administrator-managed field-location system for continuously enrolled Android devices and freshness-aware route review.",
-        "audience": "A small field team and its manager, initially the owner’s father’s business.",
-        "outcome": "Let a manager find employees quickly and review retained routes while managed tracking remains visible on each Android device.",
-        "mechanism": "An administrator-enrolled Android app captures points continuously, queues them through weak 4G, and sends them to a team-scoped dashboard where server policy controls retention.",
-        "proof": "A clearly labeled synthetic-data dashboard and bounded MVP path exist; economics and physical Android testing remain unresolved.",
-        "nextAction": "Review the synthetic demo as a held MVP; validate business economics and a real Android device before expanding or onboarding a team."
-      },
-      "kind": "product",
-      "form": "Android app and dashboard",
-      "platforms": ["Android", "Web", "API"],
-      "technologies": ["React Native", "MapLibre", "Cloudflare Workers", "D1"],
-      "group": "past",
-      "lifecycle": "inactive",
-      "shareable": true,
-      "deployed": true,
-      "deploymentProviders": ["Cloudflare Workers"],
-      "domains": ["field-track.sassmaker.com"],
-      "url": "https://field-track.sassmaker.com",
-      "repositoryUrl": "https://github.com/sass-maker/field-track",
-      "changelogUrl": "https://field-track.sassmaker.com/changelog",
-      "roadmapUrl": "https://github.com/sass-maker/field-track/issues",
-      "firstCommitAt": "2026-08-12",
-      "latestCommitAt": "2026-09-07"
-    },
-    {
       "id": "reddit-insights",
       "name": "Reddit Insights",
       "description": "Search a dated snapshot of 93 Reddit communities in your browser, with links to original posts and explicit provenance limits.",
@@ -610,9 +627,10 @@
         "outcome": "Recognize recurring shifts and emerging concerns from a retained body of subreddit evidence.",
         "mechanism": "A bounded collector stores attributable snapshots and derives recurring insight views without claiming unavailable history.",
         "proof": "The collector and snapshot model exist, but reliable lawful access to historical Reddit data remains the central blocker.",
-        "nextAction": "Use it for forward collection or retained snapshots; historical claims must wait for a lawful dependable source."
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
       },
       "kind": "experiment",
+      "category": "experimental",
       "form": "Research collector",
       "platforms": ["Web", "API"],
       "technologies": ["TypeScript", "Cloudflare Workers", "R2"],
@@ -631,12 +649,37 @@
   ],
   "products": [
     {
+      "id": "codevetter",
+      "name": "CodeVetter",
+      "description": "Execution-backed verification for AI-written software changes — local-first and inspectable.",
+      "url": "https://codevetter.com",
+      "tier": "core",
+      "category": "utility",
+      "priority": "P1",
+      "spotlight": true,
+      "lifecycle": "primary",
+      "shareable": true,
+      "maturity": "experiment",
+      "changelogUrl": "https://codevetter.com/changelog",
+      "repositoryUrl": "https://github.com/Codevetter/codevetter",
+      "roadmapUrl": "https://github.com/Codevetter/codevetter/issues",
+      "pillarId": "build",
+      "purposeContract": {
+        "purpose": "CodeVetter verifies whether AI-written software changes actually satisfy their task, not merely whether the diff looks plausible.",
+        "audience": "Developers and teams shipping code produced with AI agents.",
+        "outcome": "Higher confidence that an agent completed the requested change correctly and safely.",
+        "mechanism": "Local-first review combines repository context, executable checks, targeted evaluation, and inspectable verification receipts.",
+        "proof": "Published macOS 1.13.9 is signed and notarized. Its CLI has verified real Codex review, passing and failing executable checks, and persisted receipts on a bounded Node fixture.",
+        "nextAction": "Try the developer preview on a small local repository. Use the documented manual update path; in-app updating and other review providers remain unqualified."
+      }
+    },
+    {
       "id": "posttrainllm",
       "name": "PostTrainLLM",
       "description": "An experimental browser model playground: run small language models locally with visible generation metrics.",
       "url": "https://posttrainllm.com",
       "tier": "core",
-      "category": "product",
+      "category": "utility",
       "priority": "P1",
       "spotlight": true,
       "lifecycle": "primary",
@@ -656,26 +699,28 @@
       }
     },
     {
-      "id": "field-track",
-      "name": "Field Track",
-      "description": "A labelled synthetic field-team demo for exploring routes, visits and agent summaries; Android tracking is not qualified.",
-      "url": "https://field-track.sassmaker.com",
-      "tier": "active",
-      "category": "product",
-      "priority": "P2",
+      "id": "anime-list",
+      "name": "Anime List",
+      "description": "Anime and manga discovery with multi-axis filtering and personal watchlists.",
+      "url": "https://anime.significanthobbies.com",
+      "tier": "secondary",
+      "category": "media",
+      "priority": "P4",
       "spotlight": false,
-      "lifecycle": "inactive",
+      "lifecycle": "active",
       "shareable": true,
-      "maturity": "experiment",
-      "changelogUrl": "https://field-track.sassmaker.com/changelog",
-      "pillarId": "build",
+      "maturity": "maintained",
+      "changelogUrl": "https://anime.significanthobbies.com/changelog",
+      "repositoryUrl": "https://github.com/Significant-Hobbies/anime-list",
+      "roadmapUrl": "https://github.com/Significant-Hobbies/anime-list/issues",
+      "pillarId": "learn",
       "purposeContract": {
-        "purpose": "Field Track is an administrator-managed field-location system for continuously enrolled Android devices and freshness-aware route review.",
-        "audience": "A small field team and its manager, initially the owner’s father’s business.",
-        "outcome": "Let a manager find employees quickly and review retained routes while managed tracking remains visible on each Android device.",
-        "mechanism": "An administrator-enrolled Android app captures points continuously, queues them through weak 4G, and sends them to a team-scoped dashboard where server policy controls retention.",
-        "proof": "A clearly labeled synthetic-data dashboard and bounded MVP path exist; economics and physical Android testing remain unresolved.",
-        "nextAction": "Review the synthetic demo as a held MVP; validate business economics and a real Android device before expanding or onboarding a team."
+        "purpose": "Anime List helps anime and manga fans filter a large catalogue, discover what fits, and maintain a personal watchlist.",
+        "audience": "Anime and manga fans who want more precise discovery than a standard catalogue provides.",
+        "outcome": "Find suitable titles quickly and keep personal viewing or reading plans organized.",
+        "mechanism": "Multi-field search, shareable filters, seasonal discovery, taste tools, schedules, and signed-in watchlists operate over a large synced catalogue.",
+        "proof": "The production app serves roughly 35,000 titles and is frequently used; broader community features are intentionally out of scope.",
+        "nextAction": "Search the catalogue or use the watchlist; maintenance focuses on data quality and core discovery reliability."
       }
     },
     {
@@ -684,7 +729,7 @@
       "description": "An experimental public GitHub analysis tool for repository activity, contributions and code churn.",
       "url": "https://git.significanthobbies.com",
       "tier": "secondary",
-      "category": "product",
+      "category": "experimental",
       "priority": "P2",
       "spotlight": false,
       "lifecycle": "inactive",
@@ -704,53 +749,28 @@
       }
     },
     {
-      "id": "on-record",
-      "name": "High Signal Podcasts",
-      "description": "Search evidenced podcast claims and follow links back to the original episode or publication.",
-      "url": "https://podcasts.highsignal.app",
+      "id": "email-manager",
+      "name": "Kinetic",
+      "description": "A private Gmail workspace for local semantic search, sender insights, and explicit unsubscribe workflows.",
+      "url": "https://mail.significanthobbies.com",
       "tier": "active",
-      "category": "product",
-      "priority": "P2",
-      "spotlight": false,
-      "lifecycle": "inactive",
-      "shareable": true,
-      "maturity": "experiment",
-      "changelogUrl": "https://podcasts.highsignal.app/changelog",
-      "repositoryUrl": "https://github.com/Significant-Hobbies/on-record",
-      "roadmapUrl": "https://github.com/Significant-Hobbies/on-record/issues",
-      "pillarId": "learn",
-      "purposeContract": {
-        "purpose": "High Signal Podcasts indexes evidenced claims, recommendations, books, and tools mentioned by notable podcast guests.",
-        "audience": "People who want useful ideas from important podcasts without listening to every episode end to end.",
-        "outcome": "Find what a person actually said or recommended and trace it back to the source episode.",
-        "mechanism": "A source-backed corpus extracts attributable claims and organizes them into people, topics, books, tools, and emerging signals.",
-        "proof": "The public corpus is live with 11,624 published claims, 294 named references, and 1,190 episodes with evidence.",
-        "nextAction": "Browse a recommendation or claim and follow its quote, speaker, episode, and source receipt."
-      }
-    },
-    {
-      "id": "issue-pages",
-      "name": "IssuePages",
-      "description": "Read public GitHub issues as focused articles; publishing requires repository-owner access.",
-      "url": "https://issues.sarthakagrawal.dev",
-      "tier": "active",
-      "category": "experiment",
+      "category": "utility",
       "priority": "P4",
       "spotlight": false,
       "lifecycle": "inactive",
       "shareable": true,
-      "maturity": "experiment",
-      "changelogUrl": "https://issues.sarthakagrawal.dev/changelog",
-      "repositoryUrl": "https://github.com/sarthakagrawal927/issue-pages",
-      "roadmapUrl": "https://github.com/sarthakagrawal927/issue-pages/issues",
-      "pillarId": "build",
+      "maturity": "maintained",
+      "changelogUrl": "https://mail.significanthobbies.com/changelog",
+      "repositoryUrl": "https://github.com/Significant-Hobbies/email-manager",
+      "roadmapUrl": "https://github.com/Significant-Hobbies/email-manager/issues",
+      "pillarId": "learn",
       "purposeContract": {
-        "purpose": "IssuePages turns a GitHub issue into a readable, searchable public page.",
-        "audience": "A builder or writer who wants lightweight publishing while keeping GitHub as the editing workflow.",
-        "outcome": "Publish and update a durable page without adopting a separate CMS.",
-        "mechanism": "An owner-approved issue is rendered into a public page with edit, archive, search, and source-link behavior.",
-        "proof": "The owner-only production pilot has proven the issue-to-page loop at issues.sarthakagrawal.dev.",
-        "nextAction": "Read the current pages or inspect the pilot; public authoring remains gated on moderation and authenticated rendering."
+        "purpose": "Kinetic helps a person understand who fills their Gmail inbox and deliberately reduce unwanted volume.",
+        "audience": "A Gmail user who wants private search, sender-level insight, and explicit unsubscribe control.",
+        "outcome": "Find old mail, identify repeat senders, and unsubscribe with a clear understanding of what will change.",
+        "mechanism": "A private Gmail workspace combines local semantic search, sender aggregation, and user-confirmed unsubscribe workflows.",
+        "proof": "The maintained application performs its intended search, sender-insight, and unsubscribe jobs in regular use.",
+        "nextAction": "Open the private workspace and investigate a sender or search question; no speculative feature expansion is planned."
       }
     },
     {
@@ -759,7 +779,7 @@
       "description": "A free personality and hobby quiz that suggests a small experiment to try; account planning is not yet qualified.",
       "url": "https://live.significanthobbies.com",
       "tier": "active",
-      "category": "personal",
+      "category": "media",
       "priority": "P2",
       "spotlight": false,
       "lifecycle": "active",
@@ -779,37 +799,12 @@
       }
     },
     {
-      "id": "what-it-takes-to-win",
-      "name": "Look Sideways",
-      "description": "Explore sourced career turning points with explicit survivorship and forecasting limits.",
-      "url": "https://paths.significanthobbies.com",
-      "tier": "secondary",
-      "category": "personal",
-      "priority": "P4",
-      "spotlight": false,
-      "lifecycle": "active",
-      "shareable": true,
-      "maturity": "experiment",
-      "changelogUrl": "https://paths.significanthobbies.com/changelog",
-      "repositoryUrl": "https://github.com/Significant-Hobbies/what-it-takes-to-win",
-      "roadmapUrl": "https://github.com/Significant-Hobbies/what-it-takes-to-win/issues",
-      "pillarId": "learn",
-      "purposeContract": {
-        "purpose": "Look Sideways shows why visible success cannot be reduced to a simple formula or a fair comparison with your own path.",
-        "audience": "Readers who turn another person’s visible outcome into a judgment about their own pace, ability, or worth.",
-        "outcome": "Replace flattened comparison with a more humane, evidence-bounded understanding of conditions, sequence, perseverance, and luck.",
-        "mechanism": "A guided research exhibit connects source-linked life events and early-breakthrough paths through what people brought, were handed, and were surrounded by.",
-        "proof": "The publication contains thousands of documented early-breakthrough paths, visible methodology, and ongoing source-linked profile coverage.",
-        "nextAction": "Complete the guided comparison-futility journey, then inspect the underlying profiles, sources, and coverage."
-      }
-    },
-    {
       "id": "looptv",
       "name": "LoopTV",
       "description": "An experimental lean-back queue of curated science and other videos.",
       "url": "https://tv.significanthobbies.com",
       "tier": "secondary",
-      "category": "personal",
+      "category": "media",
       "priority": "P4",
       "spotlight": false,
       "lifecycle": "inactive",
@@ -829,37 +824,12 @@
       }
     },
     {
-      "id": "materia",
-      "name": "Materia",
-      "description": "An educational body-and-remedy reference with condition-specific research citations and explicit uncertainty.",
-      "url": "https://materia.significanthobbies.com",
-      "tier": "active",
-      "category": "experiment",
-      "priority": "P4",
-      "spotlight": false,
-      "lifecycle": "inactive",
-      "shareable": true,
-      "maturity": "experiment",
-      "changelogUrl": "https://materia.significanthobbies.com/changelog",
-      "repositoryUrl": "https://github.com/Significant-Hobbies/materia",
-      "roadmapUrl": "https://github.com/Significant-Hobbies/materia/issues",
-      "pillarId": "build",
-      "purposeContract": {
-        "purpose": "Materia explores an anatomy-led, evidence-graded reference for understanding body concerns, treatments, and remedies.",
-        "audience": "People seeking a clearer educational map from a body concern to bounded, source-backed information.",
-        "outcome": "Understand relevant anatomy and compare remedy evidence without mistaking the product for medical diagnosis.",
-        "mechanism": "An interactive body-system model links concerns to structured remedy pages with explicit evidence grades and safety limits.",
-        "proof": "A technically ambitious reference exists, but sustained evidence quality, medical safety, and content maintenance are unresolved.",
-        "nextAction": "Use the retained material as an educational experiment only; reopen publication work after defining a medical-safety and evidence standard."
-      }
-    },
-    {
       "id": "chatgpt-memory-insights",
       "name": "Memory Map",
       "description": "A browser-local experiment for importing a ChatGPT export, exploring semantic themes and search, and optionally saving analysis on your device.",
       "url": "https://chatgpt.significanthobbies.com",
       "tier": "secondary",
-      "category": "personal",
+      "category": "utility",
       "priority": "P2",
       "spotlight": false,
       "lifecycle": "inactive",
@@ -879,78 +849,28 @@
       }
     },
     {
-      "id": "psi-swarm",
-      "name": "PSI Swarm",
-      "description": "Source-installed local Lighthouse audits with saved history; use the documented source setup, not the older packaged release.",
-      "url": "https://performance.sassmaker.com",
-      "tier": "active",
-      "category": "helper",
-      "priority": "P4",
-      "spotlight": false,
-      "lifecycle": "inactive",
-      "shareable": true,
-      "maturity": "maintained",
-      "changelogUrl": "https://performance.sassmaker.com/changelog",
-      "repositoryUrl": "https://github.com/sass-maker/psi-swarm",
-      "roadmapUrl": "https://github.com/sass-maker/psi-swarm/issues",
-      "pillarId": "visibility",
-      "purposeContract": {
-        "purpose": "PSI Swarm measures website performance as repeated distributions instead of a single flattering Lighthouse run.",
-        "audience": "The Fleet operator and developers who need trustworthy performance evidence across public products.",
-        "outcome": "See typical performance, variability, and regressions under repeated real measurement conditions.",
-        "mechanism": "An operational CLI runs and aggregates multiple PageSpeed and Lighthouse observations for Site Health.",
-        "proof": "The completed measurement tool already feeds repeated performance evidence into the portfolio dashboard.",
-        "nextAction": "Run it for a concrete performance investigation or consume its evidence in Site Health; keep the tool operationally narrow."
-      }
-    },
-    {
-      "id": "veg-protein-food",
-      "name": "Recipe Index",
-      "description": "Search vegetarian recipes by protein and calories, with links to the original recipe publishers.",
-      "url": "https://veg-protein-food.significanthobbies.com",
-      "tier": "active",
-      "category": "experiment",
-      "priority": "P4",
-      "spotlight": false,
-      "lifecycle": "inactive",
-      "shareable": true,
-      "maturity": "experiment",
-      "changelogUrl": "https://veg-protein-food.significanthobbies.com/changelog",
-      "repositoryUrl": "https://github.com/Significant-Hobbies/veg-protein-food",
-      "roadmapUrl": "https://github.com/Significant-Hobbies/veg-protein-food/issues",
-      "pillarId": "build",
-      "purposeContract": {
-        "purpose": "Recipe Index collects practical higher-protein vegetarian foods and recipes built around ingredients used in Indian kitchens.",
-        "audience": "Vegetarian cooks in India who want more protein without abandoning familiar ingredients and meals.",
-        "outcome": "Find realistic food ideas and compare their nutrition when meal variety becomes useful.",
-        "mechanism": "A searchable food directory organizes recipes and ingredient-level protein comparisons for an Indian cooking context.",
-        "proof": "A public directory exists, but the result did not become compelling enough to justify active expansion.",
-        "nextAction": "Browse the retained directory; new recipe work waits until cooking variety becomes a real owner need."
-      }
-    },
-    {
-      "id": "research-papers",
-      "name": "Research Papers",
-      "description": "Search academic papers and follow original sources; account-based research chat is not yet qualified.",
-      "url": "https://papers.highsignal.app",
+      "id": "rolepatch",
+      "name": "RolePatch",
+      "description": "A guest resume-tailoring experiment with a reviewable diff and browser-local document exports.",
+      "url": "https://rolepatch.com",
       "tier": "secondary",
-      "category": "product",
+      "category": "utility",
       "priority": "P2",
       "spotlight": false,
       "lifecycle": "inactive",
       "shareable": true,
-      "maturity": "experiment",
-      "changelogUrl": "https://papers.highsignal.app/changelog",
-      "repositoryUrl": "https://github.com/High-Signal-App/research-papers",
-      "roadmapUrl": "https://github.com/High-Signal-App/research-papers/issues",
-      "pillarId": "learn",
+      "maturity": "maintained",
+      "changelogUrl": "https://rolepatch.com/changelog",
+      "repositoryUrl": "https://github.com/Significant-Hobbies/rolepatch",
+      "roadmapUrl": "https://github.com/Significant-Hobbies/rolepatch/issues",
+      "pillarId": "build",
       "purposeContract": {
-        "purpose": "Research Papers is a structured, searchable library for discovering and interrogating academic and market research.",
-        "audience": "The Fleet owner investigating a concrete product, technical, or market question.",
-        "outcome": "Find relevant papers and retrieve grounded context from a large retained corpus.",
-        "mechanism": "A curated research dataset is indexed for search and retrieval-assisted analysis with source structure intact.",
-        "proof": "The corpus and discovery system are essentially complete and available when a real research question appears.",
-        "nextAction": "Use the library for a named research question; maintain the corpus rather than expanding it speculatively."
+        "purpose": "RolePatch tailors a resume and supporting application material to the evidence and language of a specific job.",
+        "audience": "A job seeker preparing a serious application for a particular role.",
+        "outcome": "Present relevant experience more clearly and prepare for the role without inventing qualifications.",
+        "mechanism": "Paste a resume and job description, review the generated changes, save in the browser, and export the current document.",
+        "proof": "The guest resume, tailoring, review, save/reload and local document-export path has been verified with synthetic examples. Account sync and broader application tools remain unqualified.",
+        "nextAction": "Try the guest workflow for one job, review every proposed claim, and export the version you want to use."
       }
     },
     {
@@ -959,7 +879,7 @@
       "description": "A public directory of working experiments, reference projects and reusable tooling.",
       "url": "https://sassmaker.com",
       "tier": "active",
-      "category": "product",
+      "category": "media",
       "priority": "P2",
       "spotlight": false,
       "lifecycle": "active",
@@ -984,7 +904,7 @@
       "description": "Selected engineering case studies, technical writing and working project demonstrations.",
       "url": "https://sarthakagrawal.dev",
       "tier": "secondary",
-      "category": "personal",
+      "category": "media",
       "priority": "P4",
       "spotlight": false,
       "lifecycle": "inactive",
@@ -1009,7 +929,7 @@
       "description": "Explore public GitHub repositories and related projects through a searchable discovery experiment.",
       "url": "https://starboard.codevetter.com",
       "tier": "secondary",
-      "category": "product",
+      "category": "utility",
       "priority": "P2",
       "spotlight": false,
       "lifecycle": "active",
@@ -1027,22 +947,83 @@
         "proof": "Core sync, search, organization, and project-aware discovery are largely complete and under focused active improvement.",
         "nextAction": "Connect or explore a Stars collection and use a current project question to drive discovery; avoid unrelated alert or reporting scope."
       }
+    },
+    {
+      "id": "swe-interview-prep",
+      "name": "SWE Interview Prep",
+      "description": "A learning OS for software-engineering interview practice.",
+      "url": "https://learn.significanthobbies.com",
+      "tier": "secondary",
+      "category": "media",
+      "priority": "P2",
+      "spotlight": false,
+      "lifecycle": "active",
+      "shareable": true,
+      "maturity": "maintained",
+      "changelogUrl": "https://learn.significanthobbies.com/changelog",
+      "repositoryUrl": "https://github.com/Significant-Hobbies/swe-interview-prep",
+      "roadmapUrl": "https://github.com/Significant-Hobbies/swe-interview-prep/issues",
+      "pillarId": "learn",
+      "purposeContract": {
+        "purpose": "SWE Interview Prep is a personal learning OS that turns software-engineering study into retained, artifact-backed understanding.",
+        "audience": "Software engineers preparing for interviews or strengthening practical technical judgment through active study.",
+        "outcome": "Build causal understanding that survives recall and can be demonstrated through code, diagrams, explanations, or projects.",
+        "mechanism": "An evidence-gated Concept → Drill → Build → Review → Apply loop combines retrieval practice, Feynman explain-backs, roadmaps, and adaptive review.",
+        "proof": "A fresh guest can complete a graded TypeScript drill and return to saved code in the same browser. Account sync and AI-graded mastery require sign-in and remain separately unqualified.",
+        "nextAction": "Try a coding drill as a guest; progress stays in this browser. Use the issue tracker for account-sync qualification limits."
+      }
     }
   ],
   "pastProjects": [
     {
-      "id": "everythingrated",
-      "name": "EverythingRated",
-      "description": "A ratings experiment for comparing AI developer tools, with visible small-sample counts and shareable weighting.",
+      "id": "on-record",
+      "name": "High Signal Podcasts",
+      "description": "Search evidenced podcast claims and follow links back to the original episode or publication.",
       "lifecycle": "inactive",
-      "repositoryUrl": "https://github.com/High-Signal-App/everythingrated",
+      "category": "media",
+      "shareable": true,
+      "repositoryUrl": "https://github.com/Significant-Hobbies/on-record",
       "purposeContract": {
-        "purpose": "EverythingRated makes anonymous opinions about AI developer tools visible axis by axis.",
-        "audience": "Developers and technical operators comparing AI development tools for real projects.",
-        "outcome": "Inspect trade-offs across Speed, Accuracy, Cost, Ergonomics and Integration depth, with the sample size visible.",
-        "mechanism": "A public directory combines per-axis rating counts with weighted comparison links; unrated axes remain visibly unavailable.",
-        "proof": "The hosted guest comparison covers a 24-tool directory with five axes. Initial owner ratings and small samples are early opinions, not benchmarks or consensus.",
-        "nextAction": "Compare tools, inspect the per-axis evidence counts, and share a weighted comparison as an experiment. Rating submission is outside the verified guest workflow."
+        "purpose": "High Signal Podcasts indexes evidenced claims, recommendations, books, and tools mentioned by notable podcast guests.",
+        "audience": "People who want useful ideas from important podcasts without listening to every episode end to end.",
+        "outcome": "Find what a person actually said or recommended and trace it back to the source episode.",
+        "mechanism": "A source-backed corpus extracts attributable claims and organizes them into people, topics, books, tools, and emerging signals.",
+        "proof": "The public corpus is live with 11,624 published claims, 294 named references, and 1,190 episodes with evidence.",
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
+      }
+    },
+    {
+      "id": "issue-pages",
+      "name": "IssuePages",
+      "description": "Read public GitHub issues as focused articles; publishing requires repository-owner access.",
+      "lifecycle": "inactive",
+      "category": "experimental",
+      "shareable": true,
+      "repositoryUrl": "https://github.com/sarthakagrawal927/issue-pages",
+      "purposeContract": {
+        "purpose": "IssuePages turns a GitHub issue into a readable, searchable public page.",
+        "audience": "A builder or writer who wants lightweight publishing while keeping GitHub as the editing workflow.",
+        "outcome": "Publish and update a durable page without adopting a separate CMS.",
+        "mechanism": "An owner-approved issue is rendered into a public page with edit, archive, search, and source-link behavior.",
+        "proof": "The owner-only production pilot has proven the issue-to-page loop at issues.sarthakagrawal.dev.",
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
+      }
+    },
+    {
+      "id": "what-it-takes-to-win",
+      "name": "Look Sideways",
+      "description": "Explore sourced career turning points with explicit survivorship and forecasting limits.",
+      "lifecycle": "inactive",
+      "category": "media",
+      "shareable": true,
+      "repositoryUrl": "https://github.com/Significant-Hobbies/what-it-takes-to-win",
+      "purposeContract": {
+        "purpose": "Look Sideways shows why visible success cannot be reduced to a simple formula or a fair comparison with your own path.",
+        "audience": "Readers who turn another person’s visible outcome into a judgment about their own pace, ability, or worth.",
+        "outcome": "Replace flattened comparison with a more humane, evidence-bounded understanding of conditions, sequence, perseverance, and luck.",
+        "mechanism": "A guided research exhibit connects source-linked life events and early-breakthrough paths through what people brought, were handed, and were surrounded by.",
+        "proof": "The publication contains thousands of documented early-breakthrough paths, visible methodology, and ongoing source-linked profile coverage.",
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
       }
     },
     {
@@ -1050,6 +1031,8 @@
       "name": "Mashup",
       "description": "Two playable examples of a local media-editing pipeline, with captions and inspectable source and approval receipts.",
       "lifecycle": "inactive",
+      "category": "experimental",
+      "shareable": true,
       "repositoryUrl": "https://github.com/sass-maker/mashup",
       "purposeContract": {
         "purpose": "Mashup turns an owned creator archive into coherent topic-specific compilations while keeping every edit inspectable.",
@@ -1057,22 +1040,24 @@
         "outcome": "Find, approve, sequence, and render useful clips without losing source provenance or editorial control.",
         "mechanism": "A local pipeline combines archive analysis, clipping, editable EDLs, source receipts, approval boundaries, and deterministic rendering.",
         "proof": "The first public Startups proof assembles a source-faithful 47-second argument from four beats across three Creative Commons podcast episodes, with captions and media receipts.",
-        "nextAction": "Watch the public examples and inspect their source receipts. The local operator workflow and creator pilot remain separate from this showcase."
+        "nextAction": "Preserved experiment; no current work or obligation to resume."
       }
     },
     {
-      "id": "protein-index",
-      "name": "Protein Index",
-      "description": "Explore dated nutrition records with original label links, observation dates and explicit verification limits.",
+      "id": "materia",
+      "name": "Materia",
+      "description": "An educational body-and-remedy reference with condition-specific research citations and explicit uncertainty.",
       "lifecycle": "inactive",
-      "repositoryUrl": "https://github.com/Significant-Hobbies/protein-index-resilience",
+      "category": "experimental",
+      "shareable": true,
+      "repositoryUrl": "https://github.com/Significant-Hobbies/materia",
       "purposeContract": {
-        "purpose": "Protein Index was built to catalogue and compare protein products available in India using trustworthy nutrition data.",
-        "audience": "Indian shoppers comparing packaged protein sources on nutrition, price, and practical fit.",
-        "outcome": "Inspect recorded nutrition alongside its source, observation date and verification authority.",
-        "mechanism": "A product catalogue normalizes nutrition and comparison fields across available Indian protein products.",
-        "proof": "Hosted search and detail expose dated source and authority labels; one original nutrition label and its density calculation were independently checked. This does not verify the entire catalogue.",
-        "nextAction": "Explore dated records and inspect original labels; current product identity and packaging require separate verification."
+        "purpose": "Materia explores an anatomy-led, evidence-graded reference for understanding body concerns, treatments, and remedies.",
+        "audience": "People seeking a clearer educational map from a body concern to bounded, source-backed information.",
+        "outcome": "Understand relevant anatomy and compare remedy evidence without mistaking the product for medical diagnosis.",
+        "mechanism": "An interactive body-system model links concerns to structured remedy pages with explicit evidence grades and safety limits.",
+        "proof": "A technically ambitious reference exists, but sustained evidence quality, medical safety, and content maintenance are unresolved.",
+        "nextAction": "Preserved experiment; no current work or obligation to resume."
       }
     },
     {
@@ -1080,6 +1065,8 @@
       "name": "Reddit Insights",
       "description": "Search a dated snapshot of 93 Reddit communities in your browser, with links to original posts and explicit provenance limits.",
       "lifecycle": "inactive",
+      "category": "experimental",
+      "shareable": true,
       "repositoryUrl": "https://github.com/High-Signal-App/research-subreddit",
       "purposeContract": {
         "purpose": "Reddit Insights studies how topics, signals, and emotional tone inside a subreddit change over time.",
@@ -1087,7 +1074,24 @@
         "outcome": "Recognize recurring shifts and emerging concerns from a retained body of subreddit evidence.",
         "mechanism": "A bounded collector stores attributable snapshots and derives recurring insight views without claiming unavailable history.",
         "proof": "The collector and snapshot model exist, but reliable lawful access to historical Reddit data remains the central blocker.",
-        "nextAction": "Use it for forward collection or retained snapshots; historical claims must wait for a lawful dependable source."
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
+      }
+    },
+    {
+      "id": "research-papers",
+      "name": "Research Papers",
+      "description": "Search academic papers and follow original sources; account-based research chat is not yet qualified.",
+      "lifecycle": "inactive",
+      "category": "media",
+      "shareable": true,
+      "repositoryUrl": "https://github.com/High-Signal-App/research-papers",
+      "purposeContract": {
+        "purpose": "Research Papers is a structured, searchable library for discovering and interrogating academic and market research.",
+        "audience": "The Fleet owner investigating a concrete product, technical, or market question.",
+        "outcome": "Find relevant papers and retrieve grounded context from a large retained corpus.",
+        "mechanism": "A curated research dataset is indexed for search and retrieval-assisted analysis with source structure intact.",
+        "proof": "The corpus and discovery system are essentially complete and available when a real research question appears.",
+        "nextAction": "Explore the finished experiment; no ongoing roadmap or maintenance promise."
       }
     },
     {
@@ -1095,6 +1099,8 @@
       "name": "Web Playables",
       "description": "Small browser-playable game experiments.",
       "lifecycle": "inactive",
+      "category": "experimental",
+      "shareable": true,
       "repositoryUrl": "https://github.com/sarthakagrawal927/web-playables",
       "purposeContract": {
         "purpose": "Web Playables is a small laboratory for learning how browser and YouTube-ready games are designed, packaged, and distributed.",
@@ -1102,7 +1108,7 @@
         "outcome": "Prototype a mechanic once and ship it as a normal web game and a submission-ready playable package.",
         "mechanism": "A reusable gamekit supplies loops, saves, offline progress, platform adapters, and builds for a small games hub.",
         "proof": "The research goal produced a working gamekit, a live idle game, and YouTube-compatible packaging; the project is now parked.",
-        "nextAction": "Play the retained game or inspect the kit; add another game only when a specific mechanic is worth studying."
+        "nextAction": "Preserved experiment; no current work or obligation to resume."
       }
     }
   ]

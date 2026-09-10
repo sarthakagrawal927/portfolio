@@ -41,8 +41,14 @@ test('spotlight follows only shareable primary work and the directory entry', as
   assert.deepEqual(
     catalog.products
       .filter((project) => project.spotlight)
-      .map((project) => project.lifecycle),
-    ['primary']
+      .map((project) => project.id),
+    ['codevetter', 'posttrainllm']
+  );
+  assert.equal(
+    catalog.products
+      .filter((project) => project.spotlight)
+      .every((project) => project.lifecycle === 'primary'),
+    true
   );
   assert.match(source, /project.spotlight \|\| project.id === 'saas-maker'/);
 });
