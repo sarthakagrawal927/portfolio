@@ -1,5 +1,6 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
 
 /**
  * `work` — engineering case studies. Each one is an MDX file in
@@ -20,8 +21,8 @@ const work = defineCollection({
     metrics: z
       .array(z.object({ value: z.string(), label: z.string() }))
       .default([]),
-    repo: z.string().url().optional(),
-    demo: z.string().url().optional(),
+    repo: z.url().optional(),
+    demo: z.url().optional(),
     /** Show on the home page "Selected work" grid. */
     featured: z.boolean().default(false),
     /** Lower sorts first. */
