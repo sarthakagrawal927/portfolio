@@ -5,10 +5,10 @@ Engineer**. *I build dependable AI products, from infrastructure to interface.*
 
 A dark, "systems" aesthetic built to make one thing obvious: this person builds
 AI infrastructure and ships the products that use it. The landing page leads
-with CodeVetter, PostTrainLLM, HeyPace, and SaaS Maker; the full project
+with featured products from the SaaS Maker public catalog; the full project
 archive remains available at `/projects`. The site includes a focused
 homepage, engineering case studies, technical writing, a compact contact
-footer, and a live GitHub-sourced projects archive.
+footer, and a project directory sourced from that same catalog.
 
 ## Stack
 
@@ -37,7 +37,7 @@ Node version is pinned in `.nvmrc` (22).
 |---|---|
 | `/` | Focused hero, spotlight products, and selected production case studies |
 | `/work/[slug]` | Engineering case studies (real work — vector feeds, real-time pipeline, RAG agents, durable workflows) |
-| `/projects` | Full fleet archive, auto-synced from GitHub at build, with SaaS Maker as the broader directory |
+| `/projects` | Reviewed public selection from the shared SaaS Maker catalog |
 | `/about` | Bio, full experience timeline, education, toolbox |
 | `/resume` | On-site résumé + "Download PDF" |
 | `/blog` | Technical writing with an AI-authorship disclosure on every article, plus IssuePages notes |
@@ -59,8 +59,9 @@ Everything you'd want to change lives in a few files:
 | About-page toolbox | `src/pages/about.astro` |
 | Blog posts | drop `.mdx` into `src/content/blog/` |
 
-The `/projects` page and home stats pull from the GitHub API at build time
-(`src/lib/github.ts`) — no manual upkeep.
+Project selection comes from `src/data/fleet-public.json`, the checked-in SaaS
+Maker public projection. GitHub API data (`src/lib/github.ts`) supplements
+repository statistics; it does not decide which projects belong in the directory.
 
 ## Résumé → PDF
 
@@ -86,7 +87,8 @@ code-health ratchets) in `.github/workflows/deploy.yml`. Nothing is deployed
 on push.
 
 Production deployment is manual: dispatch the `Portfolio CI / Deploy` workflow.
-It rebuilds, then publishes `dist/` to the Cloudflare Pages project
+It refreshes the public catalog from `https://sassmaker.com/portfolio.json`,
+validates and rebuilds, then publishes `dist/` to the Cloudflare Pages project
 `sarthakagrawal` with `wrangler pages deploy` using the `CLOUDFLARE_API_TOKEN`
 repo secret. Without that secret the dispatch builds and skips the deploy.
 
@@ -105,7 +107,9 @@ absent from the public selection. [Deployment and browser receipt](artifacts/rel
 
 ## Portfolio projection
 
-Public project lists use `src/data/fleet-public.json`, copied from SaaS Maker’s privacy-filtered canonical projection. After syncing the SaaS Maker catalog, run `node scripts/sync-fleet-public.mjs` here, then `npm run check` and `npm run test:contract`. Use `node scripts/sync-fleet-public.mjs --check` to verify parity. Never copy the private Site Health catalog into this repository.
+Public project lists use `src/data/fleet-public.json`, copied from SaaS Maker’s privacy-filtered canonical projection, `catalog/generated/public.json`. SaaS Maker publishes that file at `/portfolio.json`; its landing page and directory use the same data, and the GitHub profile refresh workflow consumes that feed.
+
+Run `npm run catalog:sync-hosted` to refresh from the published feed, or `node scripts/sync-fleet-public.mjs` to refresh from the local SaaS Maker checkout. Run `npm run check` and `npm run test:contract` afterward. Use `npm run catalog:check-hosted` to verify published parity, or `node scripts/sync-fleet-public.mjs --check` for local parity. Invalid or empty feeds fail before replacing the snapshot. Publish the SaaS Maker feed before dispatching a portfolio release. Never copy the private Site Health catalog into this repository.
 
 ## Retained publication drafts
 

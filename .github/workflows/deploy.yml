@@ -28,6 +28,9 @@ jobs:
           enable-cache: false
 
       - run: npm ci
+      - name: Refresh public project catalog for release
+        if: github.event_name == 'workflow_dispatch'
+        run: npm run catalog:sync-hosted
       - run: npm run quality
 
       - name: Deploy to Cloudflare Pages

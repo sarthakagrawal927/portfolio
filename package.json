@@ -27,7 +27,9 @@
     "quality:hygiene": "node scripts/check-code-health.mjs hygiene",
     "quality": "npm run format:check && npm run lint && npm run typecheck && npm run test:coverage && npm run build && node scripts/check-agent-surfaces.mjs && npm run quality:unused && npm run quality:complexity && npm run quality:duplication && npm run quality:cycles && npm run quality:dependencies && npm run quality:suppressions && npm run quality:hygiene",
     "catalog:sync-public": "node scripts/sync-fleet-public.mjs",
-    "catalog:check-public": "node scripts/sync-fleet-public.mjs --check"
+    "catalog:check-public": "node scripts/sync-fleet-public.mjs --check",
+    "catalog:sync-hosted": "node scripts/sync-fleet-public.mjs --source=https://sassmaker.com/portfolio.json",
+    "catalog:check-hosted": "node scripts/sync-fleet-public.mjs --source=https://sassmaker.com/portfolio.json --check"
   },
   "dependencies": {
     "@astrojs/mdx": "8.0.1",
