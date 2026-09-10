@@ -56,7 +56,7 @@ export const catalogGroups: readonly CatalogGroup[] = [
   },
   {
     tier: 'parked',
-    label: 'More experiments · paused',
+    label: 'Past work',
     intro: 'Useful retained work without an active development commitment.',
     entries: fleetCatalog.filter((project) => project.tier === 'parked'),
   },

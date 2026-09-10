@@ -21,7 +21,7 @@ export const fleetProductGroups: FleetProductGroup[] = catalogGroups.map(
     intro: group.intro,
     products: group.entries.map((entry) => ({
       ...entry,
-      maturity: group.tier === 'parked' ? 'paused experiment' : 'experiment',
+      maturity: group.tier === 'parked' ? 'inactive' : 'experiment',
     })),
   })
 );
